@@ -1,158 +1,131 @@
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Sunshine Public School - Admission Registration</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #eef6ff;
-      margin: 0;
-      padding: 0;
-    }
+html {
+  box-sizing: border-box;
+}
+*, *::before, *::after {
+  box-sizing: inherit;
+}
 
-    header {
-      background-color: #0b3d91;
-      color: white;
-      text-align: center;
-      padding: 30px 15px;
-    }
+/* Basic Body Styles for better font and margin control */
+body {
+  font-family: sans-serif; /* Example: You can change this to your preferred font */
+  margin: 0; /* Remove default body margin */
+  line-height: 1.6; /* Improve readability of text */
+  background-color: #f4f7fa; /* A light background for the whole page */
+}
 
+/* --- Header Styling --- */
+header {
+  background-color: #0b3d91;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+header p {
+  margin-top: 8px;
+  font-size: 16px;
+}
+
+/* --- Main Content Area Styling --- */
+main {
+  max-width: 700px;
+  margin: 40px auto;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Form Element Styling --- */
+label {
+  font-weight: bold;
+  display: block;
+  margin-top: 20px;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  /* Ensure consistent appearance */
+  -webkit-appearance: none; /* Remove default styling on some browsers */
+  -moz-appearance: none;
+  appearance: none;
+}
+
+/* Style for focus state for accessibility */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #0b3d91; /* Highlight border on focus */
+  box-shadow: 0 0 0 3px rgba(11, 61, 145, 0.2); /* Subtle glow on focus */
+}
+
+/* --- Button Styling --- */
+button {
+  margin-top: 25px;
+  padding: 12px 20px;
+  background-color: #0b3d91;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+}
+
+button:hover {
+  background-color: #072b6b;
+}
+
+/* --- Footer Styling --- */
+footer {
+  text-align: center;
+  background-color: #0b3d91;
+  color: white;
+  padding: 15px;
+  margin-top: 40px;
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+  main {
+    margin: 20px; /* Adjust margin for smaller screens */
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  header {
+    padding: 20px 10px; /* Slightly reduce header padding on smaller screens */
+  }
+}
+
+/* Further adjustments for very small screens (e.g., phones) */
+@media (max-width: 480px) {
     header h1 {
-      margin: 0;
-      font-size: 32px;
+        font-size: 28px;
     }
 
     header p {
-      margin-top: 8px;
-      font-size: 16px;
+        font-size: 14px;
     }
 
     main {
-      max-width: 700px;
-      margin: 40px auto;
-      background-color: #ffffff;
-      padding: 30px;
-      border-radius: 10px;
-      box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+        margin: 15px;
+        padding: 15px;
     }
 
-    label {
-      font-weight: bold;
-      display: block;
-      margin-top: 20px;
-    }
-
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      font-size: 16px;
+    input, select, textarea, button {
+        font-size: 15px;
     }
 
     button {
-      margin-top: 25px;
-      padding: 12px 20px;
-      background-color: #0b3d91;
-      color: white;
-      font-size: 16px;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
+        padding: 10px 15px;
     }
-
-    button:hover {
-      background-color: #072b6b;
-    }
-
-    footer {
-      text-align: center;
-      background-color: #0b3d91;
-      color: white;
-      padding: 15px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 768px) {
-      main {
-        margin: 20px;
-        padding: 20px;
-      }
-    }
-  </style>
-</head>
-<body>
-
-  <!-- Header -->
-  <header>
-    <h1>Sunshine Public School</h1>
-    <p>Online Admission Registration Form</p>
-  </header>
-
-  <!-- Admission Form -->
-  <main>
-    <form action="https://formsubmit.co/your@email.com" method="POST">
-     <input type="text" name="name" required>
-     <input type="email" name="email" required>
-     <button type="submit">Send</button>
-</form>
-      <!-- Replace your@email.com with your real email -->
-
-      <label for="name">Student's Full Name:</label>
-      <input type="text" id="name" name="Student Name" required>
-
-      <label for="dob">Date of Birth:</label>
-      <input type="date" id="dob" name="Date of Birth" required>
-
-      <label for="class">Class Applying For:</label>
-      <select id="class" name="Class" required>
-        <option value="">-- Select Class --</option>
-        <option value="Nursery">Nursery</option>
-        <option value="LKG">LKG</option>
-        <option value="UKG">UKG</option>
-        <option value="1st">1st Grade</option>
-        <option value="2nd">2nd Grade</option>
-        <option value="3rd">3rd Grade</option>
-        <option value="4th">4th Grade</option>
-        <option value="5th">5th Grade</option>
-      </select>
-
-      <label for="gender">Gender:</label>
-      <select id="gender" name="Gender" required>
-        <option value="">-- Select Gender --</option>
-        <option value="Male">Male</option>
-        <option value="Female">Female</option>
-        <option value="Other">Other</option>
-      </select>
-
-      <label for="parent">Parent/Guardian's Name:</label>
-      <input type="text" id="parent" name="Parent Name" required>
-
-      <label for="email">Parent's Email Address:</label>
-      <input type="email" id="email" name="Email" required>
-
-      <label for="phone">Phone Number:</label>
-      <input type="tel" id="phone" name="Phone" placeholder="e.g. 9876543210" required pattern="[0-9]{10}">
-
-      <label for="address">Residential Address:</label>
-      <textarea id="address" name="Address" rows="3" required></textarea>
-
-      <!-- FormSubmit Hidden Features (optional) -->
-      <input type="hidden" name="_captcha" value="false">
-      <input type="hidden" name="_template" value="table">
-      <input type="hidden" name="_next" value="https://dhanrni7172.github.io/Sunshine1/success.html">
-
-      <button type="submit">Submit Registration</button>
-    </form>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    &copy; 2025 Sunshine Public School. All Rights Reserved.
-  </footer>
-
-</body>
-</html>
-
+}
