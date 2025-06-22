@@ -93,7 +93,7 @@
 
   <!-- Admission Form -->
   <main>
-    <form action="https://formsubmit.co/your@email.com" method="POST">
+    <form action="https://formsubmit.co/dharni7172@gmail.com" method="POST">
       <!-- Replace your@email.com with your real email -->
 
       <label for="name">Student's Full Name:</label>
